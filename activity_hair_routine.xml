@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="@drawable/w"
+    android:padding="16dp">
+
+    <!-- Question 1: Hair Type -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="6dp"
+        android:text="Please answer the following questions about your hair care routine:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvHairType"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is your hair type?"
+        android:textStyle="bold|italic"
+        android:layout_below="@id/tvHeader"
+        android:layout_marginTop="6dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgHairType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHairType"
+        android:layout_marginTop="6dp">
+
+        <RadioButton
+            android:id="@+id/rbHairTypeCurly"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            android:text="Curly" />
+
+        <RadioButton
+            android:id="@+id/rbHairTypeStraight"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            android:text="Straight" />
+
+        <RadioButton
+            android:id="@+id/rbHairTypeWavy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Wavy" />
+
+        <RadioButton
+            android:id="@+id/rbHairTypeCoily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Coily" />
+    </RadioGroup>
+
+    <!-- Question 2: Hair Condition -->
+    <TextView
+        android:id="@+id/tvHairCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:textSize="16sp"
+        android:text="How would you describe your hair condition?"
+        android:layout_below="@id/rgHairType"
+        android:layout_marginTop="2dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgHairCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHairCondition"
+        android:layout_marginTop="6dp">
+
+        <RadioButton
+            android:id="@+id/rbHairConditionDry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Dry" />
+
+        <RadioButton
+            android:id="@+id/rbHairConditionOily"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            android:text="Oily" />
+
+        <RadioButton
+            android:id="@+id/rbHairConditionNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/rbHairConditionSensitive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Sensitive" />
+    </RadioGroup>
+
+    <!-- Question 3: Allergy -->
+
+    <TextView
+        android:id="@+id/tvAllergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgHairCondition"
+        android:layout_marginTop="2dp"
+        android:text="Are you allergic to any chemical?"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <CheckBox
+        android:id="@+id/cbAllergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:layout_below="@id/tvAllergy"
+        android:layout_marginTop="2dp"
+        android:textSize="15sp"/>
+
+    <!-- Next Button -->
+    <EditText
+        android:id="@+id/etAllergyDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:hint="Specify the chemical"
+        android:textStyle="bold"
+
+        />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textStyle="bold"
+        android:backgroundTint="#930D9B"
+        android:layout_marginTop="650dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
